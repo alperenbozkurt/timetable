@@ -36,6 +36,7 @@ ul{
   list-style: none;
   display: block;
   width: 166px;
+  font-weight: bold;
 }
 .day {
   width: 166px;
@@ -103,4 +104,28 @@ hr {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+.events {
+  color: #616161;
+  width: 820px;
+  text-align: left;
+  margin-left: 10px;
+  float: left;
+  opacity: 0.9;
+
+}
+ul > .container > li {
+  list-style: none;
+}
+.event {
+  height: 40px;
+  line-height: 40px;
+}
+.event-time {
+  text-align: right;
+}
+.term {
+  height: 60px;
+  line-height: 60px;
+  font-weight: bold;
 }
