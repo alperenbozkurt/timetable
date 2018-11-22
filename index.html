@@ -6,6 +6,35 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <script type="text/javascript">
+      function bilgilendirBeni () {
+        if (!("Notification" in window)) {
+         alert("Bu tarayıcı web bilgilendirme özelliğini desteklemiyor.");
+        }else if (Notification.permission === "granted") {
+         var notification2 = new Notification('Deneme', {
+           body: 'Deneme',
+           icon: 'https://image.flaticon.com/icons/svg/81/81147.svg',
+           tag: 'demo',
+           dir: 'auto',
+           lang: ''
+         });
+        }
+        else if (Notification.permission !== 'denied') {
+         Notification.requestPermission(function (permission) {
+           if (permission === "granted") {
+             var notification2 = new Notification('Deneme', {
+               body: 'Deneme',
+               icon: 'https://image.flaticon.com/icons/svg/81/81147.svg',
+               tag: 'demo',
+               dir: 'auto',
+               lang: ''
+             });
+            }
+         });
+       }
+     }
+     bilgilendirBeni();
+    </script>
     <div class="title">
       <div class="container">
         Ders Programı
